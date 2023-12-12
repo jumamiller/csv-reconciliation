@@ -8,3 +8,6 @@ from todo.models import User
 class AllUsersView(ListView):
     model = User
     template_name = 'todo/users.html'
+
+    def get_queryset(self):
+        return User.objects.all().order_by('first_name')
