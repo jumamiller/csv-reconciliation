@@ -1,0 +1,12 @@
+<h1>System Users:</h1>
+<table>
+    {% for item in object_list %}
+    <tr>
+        <td>{{ item.first_name }}</td>
+        <td>{{ item.last_name }}</td>
+        <td>{{ item.email_address }}</td>
+        <td>{{ item.phone_number }}</td>
+        <td>{{ item.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
